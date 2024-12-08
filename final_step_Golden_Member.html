@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Golden Member Final Step for Quick Service. Confirm and agree to the service price.">
+    <title>Final Step - Golden Member</title>
+    <link rel="icon" href="information.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #ffd700;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d32f2f;
+            margin-bottom: 30px;
+        }
+
+        button {
+            background-color: #ffd700;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            padding: 12px 20px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #fbc02d;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .info {
+            font-size: 14px;
+            color: #555;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>You're Almost There!</h1>
+        <p>Dear Golden Member, you're just one step away from receiving our assistance. We are ready to help you as soon as you confirm.</p>
+        
+        <p class="price">Total Service Price: $150.00</p>
+
+        <p>Do you agree to proceed with the service and the mentioned price?</p>
+
+        <!-- Buttons for agreement -->
+        <form action="Golden_Member_Payment.html" method="get">
+            <button type="submit" name="action" value="agree">I Agree to Proceed</button>
+        </form>
+
+        <form action="index.html" method="get">
+            <button type="submit" name="action" value="cancel">Cancel Service</button>
+        </form>
+
+        <p class="info">If you agree, our service team will be dispatched immediately. If you choose to cancel, no further actions will be taken.</p>
+    </div>
+
+</body>
+</html>

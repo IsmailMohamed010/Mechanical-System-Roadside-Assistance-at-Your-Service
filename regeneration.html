@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Regeneration page for new member with personal and car details.">
+    <title>New Member Regeneration</title>
+    <link rel="icon" href="information.png" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Main container */
+        .main-container {
+            width: 80%;
+            max-width: 600px;
+            background-color: rgba(237, 24, 24, 0.648);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        /* Header */
+        .header {
+            background-color: brown;
+            color: whitesmoke;
+            font-size: 35px;
+            font-weight: bold;
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        /* Form fields */
+        label {
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+            margin-left: 15px;
+        }
+
+        input, select {
+            width: calc(100% - 24px); /* Adjust for padding to maintain consistent spacing */
+            padding: 12px;
+            font-size: 16px;
+            margin: 8px auto;
+            border: none;
+            border-radius: 5px;
+            display: block;
+            box-sizing: border-box; /* Ensures padding doesn't affect the width */
+        }
+
+        /* Submit Button */
+        button {
+            background-color: rgba(165, 77, 42, 0.716);
+            color: whitesmoke;
+            border: none;
+            padding: 15px;
+            font-size: 20px;
+            width: 100%;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #c57a33;
+        }
+
+        .info {
+            color: white;
+            font-size: 16px;
+            margin-top: 15px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="header">
+            New Member Registration
+        </div>
+
+        <form action="confirmation.html" method="get">
+            <!-- Full Name -->
+            <label for="full_name">Full Name</label>
+            <input type="text" id="full_name" name="full_name" placeholder="Enter your full name" required>
+
+            <!-- Phone Number -->
+            <label for="phone_number">Phone Number</label>
+            <input type="text" id="phone_number" name="phone_number" placeholder="Enter your phone number" required>
+
+            <!-- National ID -->
+            <label for="national_id">National ID</label>
+            <input type="text" id="national_id" name="national_id" placeholder="Enter your national ID" required>
+
+            <!-- Gender -->
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" required>
+                <option value="" disabled selected>Select your gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+
+            <!-- Car Number -->
+            <label for="car_number">Car Number (Card)</label>
+            <input type="text" id="car_number" name="car_number" placeholder="Enter your car number" required>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit Registration</button>
+        </form>
+
+        <p class="info">After submitting, you will receive a confirmation message. We look forward to assisting you.</p>
+    </div>
+
+</body>
+</html>

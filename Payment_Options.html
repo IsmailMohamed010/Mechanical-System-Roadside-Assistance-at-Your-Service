@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Payment Page to choose between Visa Card or Cash.">
+    <title>Payment Options</title>
+    <link rel="icon" href="information.png" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Main container */
+        .main-container {
+            width: 80%;
+            max-width: 600px;
+            background-color: rgba(237, 24, 24, 0.648);
+            border-radius: 10px;
+            padding: 30px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Header */
+        .header {
+            background-color: brown;
+            color: whitesmoke;
+            font-size: 35px;
+            font-weight: bold;
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+
+        /* Payment Options */
+        .payment-option {
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        button {
+            background-color: rgba(165, 77, 42, 0.716);
+            color: whitesmoke;
+            border: none;
+            padding: 15px;
+            font-size: 18px;
+            width: 100%;
+            margin: 15px auto;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #c57a33;
+        }
+
+        .visa-form {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .visa-form label {
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 8px;
+            margin-bottom: 0;
+            margin-left: 15px;
+            display: block;
+        }
+
+        .visa-form input {
+            width: calc(100% - 20px);
+            padding: 12px;
+            font-size: 16px;
+            margin: 10px 10px;
+            border: none;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .visa-form button {
+            margin-top: 15px;
+        }
+    </style>
+    <script>
+        function showVisaForm() {
+            document.querySelector('.visa-form').style.display = 'block';
+        }
+
+        function goToThankYou() {
+            window.location.href = 'thank_you.html';
+        }
+    </script>
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="header">
+            Choose Payment Method
+        </div>
+
+        <div class="payment-option">
+            <button onclick="goToThankYou()">Pay by Cash</button>
+        </div>
+
+        <div class="payment-option">
+            <button onclick="showVisaForm()">Pay by Visa Card</button>
+        </div>
+
+        <form class="visa-form" action="thank_you.html" method="get">
+            <label for="card_number">Card Number</label>
+            <input type="text" id="card_number" name="card_number" placeholder="Enter your card number" required>
+
+            <label for="expiry_date">Expiry Date</label>
+            <input type="text" id="expiry_date" name="expiry_date" placeholder="MM/YY" required>
+
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" name="cvv" placeholder="Enter CVV" required>
+
+            <button type="submit">Confirm Payment</button>
+        </form>
+    </div>
+
+</body>
+</html>

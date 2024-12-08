@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechanical System - Roadside Assistance</title>
+    <link rel="icon" href="information.png" type="image/x-icon">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8; /* Soft light greyish-blue background */
+            color: #555; /* Softer text color */
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #2a3d4c; /* Soft navy blue */
+        }
+
+        h3 {
+            color: #4b6d7d; /* Slightly muted dark blue */
+        }
+
+        /* Highlighting Keywords with a Different Color */
+        .highlight {
+            color: #82c0cc; /* Soft turquoise for highlights */
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 1.1em;
+            background-color: #d8e6ef; /* Soft pastel blue */
+            padding: 15px;
+            border-radius: 10px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        p:hover {
+            background-color: #c4d6e2; /* Lighter blue on hover */
+            transform: translateY(-5px);
+        }
+
+        ul, ol {
+            padding-left: 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #a2c5d8; /* Soft pastel blue */
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            animation: fadeIn 2s ease-out;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        /* Features Section with Flexbox Layout */
+        #features {
+            background-color: white;
+            padding: 40px 0;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .features-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px; /* Add space between items */
+        }
+
+        .feature {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #f9f9f9; /* Optional: slight background for each feature */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+        }
+
+        .feature img {
+            flex-shrink: 0; /* Prevent the image from shrinking */
+            margin-right: 20px;
+            width: 80px; /* Adjust size */
+            height: 80px;
+        }
+
+        .feature h3 {
+            font-size: 1.5em;
+            color: #4b6d7d; /* Muted blue */
+        }
+
+        .feature p {
+            font-size: 1.1em;
+            flex: 1;
+        }
+
+        /* Animation for the feature section */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* How It Works Section */
+        #how-it-works {
+            background-color: #4c6987c2; /* Very soft off-white with a hint of blue */
+            padding: 40px 0;
+            animation: fadeIn 2s ease-out;
+            color: whitesmoke;
+        }
+
+        #how-it-works ol {
+            list-style-type: decimal;
+        }
+
+        #how-it-works li {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        /* Why Choose Us Section */
+        #why-choose-us {
+            background-color: white;
+            padding: 40px 0;
+        }
+
+        #why-choose-us ul {
+            list-style-type: disc;
+        }
+
+        #why-choose-us li {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #a2c5d8; /* Soft pastel blue */
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        footer h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            font-size: 1.2em;
+        }
+
+        /* Button Styles */
+        .button {
+            background-color: #82c0cc; /* Soft turquoise */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #66a9b3; /* Slightly darker turquoise on hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Mechanical System: Roadside Assistance at Your Service</h1>
+            <p>Your trusted companion for reliable, immediate roadside assistance</p>
+            <a href="Servise_Page.html" class="button">Use Our Service</a>
+        </div>
+    </header>
+
+    <section id="features">
+        <div class="container">
+            <h2>Key Features</h2>
+            <div class="features-container">
+                <div class="feature">
+                    <img src="smartphone-icon-front-side-with-white-background.jpg" alt="Mobile App">
+                    <div>
+                        <h3>User-Friendly Mobile App</h3>
+                        <p>Easily request assistance, track service status, and manage your account on the go.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <img src="map-pin-front-side-with-white-background.jpg" alt="GPS Tracking">
+                    <div>
+                        <h3>Real-Time GPS Tracking</h3>
+                        <p>Get the exact location of service providers as they approach you.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <img src="credit-card-front-side-with-white-background.jpg" alt="Secure Payment">
+                    <div>
+                        <h3>Secure Payment Integration</h3>
+                        <p>Pay seamlessly using various methods like <span class="highlight">credit cards</span> or <span class="highlight">digital wallets</span>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works">
+        <div class="container">
+            <h2>How It Works</h2>
+            <ol>
+                <li><strong>Request Assistance:</strong> Choose your service (towing, repair, cleaning) and enter your location.</li>
+                <li><strong>Track Service in Real-Time:</strong> See where the service provider is and when they’ll arrive.</li>
+                <li><strong>Complete Payment:</strong> Pay securely for your service through the app.</li>
+                <li><strong>Rate Your Experience:</strong> Help us improve by providing feedback on the service you received.</li>
+            </ol>
+        </div>
+    </section>
+
+    <section id="why-choose-us">
+        <div class="container">
+            <h2>Why Choose Us?</h2>
+            <ul>
+                <li><strong>Increased Efficiency:</strong> Quick dispatch and real-time tracking ensure faster response times.</li>
+                <li><strong>Enhanced Customer Experience:</strong> A seamless mobile app and intuitive service request system.</li>
+                <li><strong>Data Insights:</strong> Leverage our service data to improve decision-making and predict future needs.</li>
+                <li><strong>Cost Savings:</strong> Optimized service processes reduce costs and increase operational efficiency.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h2>Get Started</h2>
+            <p>Download our app or contact us for more information. Experience roadside assistance like never before!</p>
+            <a href="Servise_Page.html" class="button">Use Our Service</a>
+        </div>
+    </footer>
+</body>
+</html>

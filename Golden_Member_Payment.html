@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Golden Member Payment Options with Visa Card Details.">
+    <title>Golden Member Payment</title>
+    <link rel="icon" href="information.png" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff; /* White background */
+            color: #FFD700; /* Gold text color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .main-container {
+            width: 80%;
+            max-width: 600px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .header {
+            background-color: rgb(255, 255, 255);
+            color: gold;
+            font-size: 35px;
+            font-weight: bold;
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #ffd700; /* Gold button color */
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 20px;
+            width: 100%;
+            margin-top: 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #fbc02d; /* Slightly darker gold */
+        }
+
+        .info {
+            color: #FFD700; /* Gold text */
+            font-size: 16px;
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .visa-details {
+            margin-top: 20px;
+            display: none;
+        }
+
+        .visa-details label {
+            color: #FFD700; /* Gold text */
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 15px;
+            display: block;
+        }
+
+        .visa-details input {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            margin-top: 5px; /* Reduced margin between input fields */
+            margin-bottom: 15px; /* Added margin below the input fields for better spacing */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .visa-details button {
+            margin-top: 15px;
+            background-color: #ffd700; /* Gold button for confirmation */
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 20px;
+            width: 100%;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .visa-details button:hover {
+            background-color: #fbc02d; /* Slightly darker gold */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="header">
+            Golden Member Payment
+        </div>
+
+        <form id="payment-form" action="thank_you_Golden_Member.html" method="get">
+            <!-- Cash Payment Option -->
+            <button type="submit" name="payment_method" value="cash">Pay by Cash</button>
+        </form>
+
+        <p class="info">OR</p>
+
+            <!-- Visa Payment Option -->
+            <button type="button" onclick="showVisaForm()">Pay by Visa Card</button>
+
+        <p class="info">OR</p>
+
+        <form action="thank_you_Golden_Member.html" method="get">
+            <button type="submit" name="payment_method" value="company_account">Pay by Your Company Account</button>
+        </form>
+
+        <!-- Visa Details Form (Hidden initially) -->
+        <div class="visa-details" id="visa-details">
+            <h3>Enter Visa Card Details</h3>
+            <form action="thank_you_Golden_Member.html" method="get">
+                <label for="card_number">Card Number</label>
+                <input type="text" id="card_number" name="card_number" placeholder="Enter your card number" required>
+
+                <label for="expiry_date">Expiry Date</label>
+                <input type="text" id="expiry_date" name="expiry_date" placeholder="MM/YY" required>
+
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="Enter your CVV" required>
+
+                <button type="submit" name="payment_method" value="visa">Confirm Visa Payment</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showVisaForm() {
+            document.getElementById('visa-details').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
