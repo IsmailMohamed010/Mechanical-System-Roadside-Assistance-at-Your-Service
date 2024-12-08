@@ -106,6 +106,24 @@
             padding: 10px;
             border: 1px dashed #ccc;
         }
+
+        /* Button to get GPS location */
+        .gps-button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .gps-button:hover {
+            background-color: #388e3c;
+        }
     </style>
 </head>
 <body>
@@ -134,6 +152,9 @@
             <label for="location">Location</label>
             <textarea id="location" name="location" placeholder="Allow GPS or describe your location" required></textarea>
 
+            <!-- Button to get the current location -->
+            <button type="button" class="gps-button" onclick="getLocation()">Get My Location</button>
+
             <label for="car_accident_photo">Photo of Car at Accident Spot</label>
             <div class="photo-input">
                 <input type="file" id="car_accident_photo" name="car_accident_photo" accept="image/*" required>
@@ -150,5 +171,43 @@
             <button type="submit">Submit</button>
         </form>
     </div>
+
+    <script>
+        // Function to get the location using Geolocation API
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+        }
+
+        // Function to display the position
+        function showPosition(position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+
+            // Display the location in the textarea
+            document.getElementById("location").value = "Latitude: " + latitude + ", Longitude: " + longitude;
+        }
+
+        // Function to handle errors
+        function showError(error) {
+            switch(error.code) {
+                case error.PERMISSION_DENIED:
+                    alert("User denied the request for Geolocation.");
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    alert("Location information is unavailable.");
+                    break;
+                case error.TIMEOUT:
+                    alert("The request to get user location timed out.");
+                    break;
+                case error.UNKNOWN_ERROR:
+                    alert("An unknown error occurred.");
+                    break;
+            }
+        }
+    </script>
 </body>
 </html>
